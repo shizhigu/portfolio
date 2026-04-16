@@ -11,19 +11,19 @@ gsap.registerPlugin(ScrollTrigger);
 /* ═══ DATA ═══ */
 
 const projects = [
-  { cat: "AI AGENTS", name: "Signal Scout", desc: "What if 1000 AI agents could do a data scientist's job in 5 minutes? Connect your data warehouse, get back a statistically rigorous customer profile — no prompts, no dashboards, no consultants.", tech: ["Claude SDK", "FastAPI", "Modal", "DuckDB", "MCP"], url: "https://github.com/shizhigu/signal-scout", brief: "/briefs/signal-scout.md", featured: false },
-  { cat: "CREATIVE AI", name: "film-cli", desc: "Can an AI agent direct a film? Not a clip — a real multi-shot narrative with consistent characters and continuity. This CLI lets Claude Code produce short films, shot by shot, with quality gates that reject anything below 8/10.", tech: ["Bun/TS", "Kling", "Gemini Pro", "Remotion"], url: "https://github.com/shizhigu/film-cli", brief: "/briefs/film-cli.md", featured: true },
-  { cat: "iOS", name: "GlanceQuote", desc: "I was tired of unlocking my phone to check ES futures while driving. So I built an app that puts live prices on the Dynamic Island. Glance down, see the number, eyes back on the road.", tech: ["Swift", "SwiftUI", "ActivityKit", "WebSocket"], url: "https://github.com/shizhigu/glance-quote", brief: "/briefs/glancequote.md", featured: false },
-  { cat: "AI AGENTS", name: "Marketa-Pro", desc: "Small e-commerce brands can't afford a content team. This platform replaces one — an AI orchestrator dispatches trend, strategy, and content agents to generate platform-ready marketing packages for any marketplace.", tech: ["Google ADK", "LiteLLM", "FastAPI"], url: "https://github.com/shizhigu/marketa-pro", brief: "/briefs/marketa-pro.md", featured: false },
-  { cat: "FULL-STACK", name: "venue-ops-ai", desc: "Venue management still runs on walkie-talkies. I built a system where a manager just says \"show me urgent plumbing issues\" and an AI deputy handles the rest — dispatching workers, tracking tasks, escalating emergencies.", tech: ["Next.js", "LangGraph", "Deepgram", "Claude"], url: "https://github.com/shizhigu/venue-ops-ai", brief: "/briefs/venue-ops-ai.md", featured: true },
-  { cat: "AI PRODUCT", name: "TokForm", desc: "Surveys get 15% completion rates. What if research felt like scrolling TikTok? Swipe through AI-generated questions that adapt in real-time. Early tests showed 3.7x deeper responses.", tech: ["Next.js", "Agno", "FastAPI", "Redis"], url: "https://github.com/shizhigu/smart-form-frontend", brief: "/briefs/tokform.md", featured: false },
-  { cat: "AI AGENTS", name: "QuotientAI", desc: "Content creators leave 25-40% of deal value on the table because they don't know what brands pay. This 7-agent system does the research for them — analyzing brands, finding contacts, generating negotiation strategies.", tech: ["Google ADK", "Pinecone", "Perplexity"], url: "https://github.com/shizhigu/quotientai", brief: "/briefs/quotientai.md", featured: false },
-  { cat: "DEVTOOLS", name: "skills-chat", desc: "Most AI chat apps are generic. This one lets you plug in personas, skills, and sandboxed tools like building blocks. Think: an AI that's actually good at specific things, not just everything poorly.", tech: ["React Router", "Claude SDK", "Bun", "MCP"], url: "https://github.com/shizhigu/skills-chat", brief: "/briefs/skills-chat.md", featured: false },
-  { cat: "FINTECH", name: "fundley-app", desc: "\"Show me ROE for all tech companies above $10B market cap\" — type that in natural language, and the system compiles it to SQL, runs it, and saves it as a living analysis block you can revisit.", tech: ["Next.js", "AI SDK", "E2B", "Drizzle"], url: "https://github.com/shizhigu/fundley-app-new", brief: "/briefs/fundley-app.md", featured: true },
-  { cat: "FULL-STACK", name: "DeductionTracker", desc: "Tax season shouldn't require a spreadsheet. Snap a receipt, categorize it, track deductions across web and mobile with a shared component library under the hood.", tech: ["Next.js", "React", "Drizzle", "Neon"], url: "https://github.com/shizhigu/DeductionTracker", brief: "/briefs/deductiontracker.md", featured: false },
+  { cat: "AI AGENTS", name: "Signal Scout", desc: "Most AI analytics tools stop at dashboards. Signal Scout spins up a swarm of database-connected investigators that find ICP patterns, test them statistically, and return conclusions with evidence instead of vibes.", tech: ["Claude SDK", "FastAPI", "Modal", "DuckDB", "MCP"], url: "https://github.com/shizhigu/signal-scout", brief: "/briefs/signal-scout.md", featured: false },
+  { cat: "CREATIVE AI", name: "film-cli", desc: "Single AI video clips are easy. Coherent films are hard. film-cli gives agents a quality-gated production loop for multi-shot storytelling, continuity control, and shot-by-shot iteration.", tech: ["Bun/TS", "Kling", "Gemini Pro", "Remotion"], url: "https://github.com/shizhigu/film-cli", brief: "/briefs/film-cli.md", featured: true },
+  { cat: "iOS", name: "GlanceQuote", desc: "A market data app built for glancing, not tapping. Live crypto, stocks, and futures stream straight to the Dynamic Island so you can check price action without opening a brokerage app.", tech: ["Swift", "SwiftUI", "ActivityKit", "WebSocket"], url: "https://github.com/shizhigu/glance-quote", brief: "/briefs/glancequote.md", featured: false },
+  { cat: "AI AGENTS", name: "Marketa-Pro", desc: "An AI content team for brands that can't afford one: trend research, audience strategy, creative direction, and marketplace-ready copy generated through orchestrated specialist agents.", tech: ["Google ADK", "LiteLLM", "FastAPI"], url: "https://github.com/shizhigu/marketa-pro", brief: "/briefs/marketa-pro.md", featured: false },
+  { cat: "FULL-STACK", name: "venue-ops-ai", desc: "Walkie-talkies are terrible software. venue-ops-ai turns messy venue operations into a conversational command layer that triages issues, dispatches work, and keeps a live audit trail.", tech: ["Next.js", "LangGraph", "Deepgram", "Claude"], url: "https://github.com/shizhigu/venue-ops-ai", brief: "/briefs/venue-ops-ai.md", featured: true },
+  { cat: "AI PRODUCT", name: "TokForm", desc: "Surveys are rigid and shallow. TokForm makes research feel like a feed: adaptive AI interviews, swipe-native UX, and responses that go materially deeper than static forms.", tech: ["Next.js", "Agno", "FastAPI", "Redis"], url: "https://github.com/shizhigu/smart-form-frontend", brief: "/briefs/tokform.md", featured: false },
+  { cat: "AI AGENTS", name: "QuotientAI", desc: "A negotiation copilot for creators who are tired of getting outpriced. Multi-agent workflows research brands, benchmark deal value, find contacts, and generate smarter counteroffers.", tech: ["Google ADK", "Pinecone", "Perplexity"], url: "https://github.com/shizhigu/quotientai", brief: "/briefs/quotientai.md", featured: false },
+  { cat: "DEVTOOLS", name: "skills-chat", desc: "Generic chatbots are boring. skills-chat turns personas, tools, and reusable skills into a modular AI workspace where the assistant can actually do domain-specific work.", tech: ["React Router", "Claude SDK", "Bun", "MCP"], url: "https://github.com/shizhigu/skills-chat", brief: "/briefs/skills-chat.md", featured: false },
+  { cat: "FINTECH", name: "fundley-app", desc: "Ask a financial question in plain English, get back a reusable analysis artifact. Fundley combines verified data, sandboxed code execution, and agent orchestration in one research workspace.", tech: ["Next.js", "AI SDK", "E2B", "Drizzle"], url: "https://github.com/shizhigu/fundley-app-new", brief: "/briefs/fundley-app.md", featured: true },
+  { cat: "FULL-STACK", name: "DeductionTracker", desc: "A calmer take on expense tracking for freelancers: capture receipts, classify deductions, and manage tax-season chaos across web and mobile from one shared system.", tech: ["Next.js", "React", "Drizzle", "Neon"], url: "https://github.com/shizhigu/DeductionTracker", brief: "/briefs/deductiontracker.md", featured: false },
 ];
 
-const skills = ["Claude Agent SDK", "Multi-Agent", "LangGraph", "MCP", "FastAPI", "Next.js", "React Native", "SwiftUI", "WebSocket", "PostgreSQL", "TypeScript", "Python", "Swift"];
+const skills = ["Claude Agent SDK", "Structured Outputs", "LangGraph", "MCP", "FastAPI", "Next.js", "SwiftUI", "DuckDB", "PostgreSQL", "TypeScript", "Python", "Modal", "React"];
 
 function CopyBriefButton({ briefUrl }: { briefUrl: string }) {
   const [copied, setCopied] = useState(false);
@@ -73,10 +73,10 @@ function CopyBriefButton({ briefUrl }: { briefUrl: string }) {
 /* ═══ TYPEWRITER ═══ */
 
 const taglines = [
-  "I build autonomous AI agent systems",
-  "I ship multi-agent orchestration platforms",
-  "I build real-time data pipelines",
-  "I create AI-native products from scratch",
+  "I build AI systems that don't stop at chat",
+  "I make agent workflows survive messy reality",
+  "I turn raw data into products that think",
+  "I ship full-stack AI from prototype to production",
 ];
 
 function TypewriterTagline() {
@@ -211,7 +211,7 @@ export default function Home() {
 
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1000, margin: "0 auto", padding: "0 32px", width: "100%" }}>
           <p className="hero-sub" style={{ fontSize: 14, fontWeight: 510, color: "var(--text-3)", letterSpacing: "-0.1px", marginBottom: 16, opacity: 0, transform: "translateY(16px)" }}>
-            AI Engineer &middot; Full-Stack Builder
+            AI Systems Engineer &middot; Full-Stack Builder
           </p>
 
           <h1 ref={nameRef} className="hero-name" style={{ marginBottom: 20 }}>
@@ -220,8 +220,8 @@ export default function Home() {
 
           <TypewriterTagline />
 
-          <p className="hero-deck" style={{ fontSize: 16, fontWeight: 400, lineHeight: 1.7, color: "var(--text-3)", maxWidth: 460, marginBottom: 36, opacity: 0, transform: "translateY(16px)" }}>
-            Multi-agent orchestration, real-time data pipelines, AI-native products. I ship fast and I ship complete.
+          <p className="hero-deck" style={{ fontSize: 16, fontWeight: 400, lineHeight: 1.7, color: "var(--text-3)", maxWidth: 560, marginBottom: 36, opacity: 0, transform: "translateY(16px)" }}>
+            I build AI products with teeth: agent systems that touch real data, survive messy inputs, and return outputs you can actually trust. Less demo magic, more architecture, evidence, and systems that hold up under load.
           </p>
 
           <div className="hero-actions" style={{ display: "flex", gap: 10, flexWrap: "wrap", opacity: 0, transform: "translateY(16px)" }}>
@@ -315,10 +315,10 @@ export default function Home() {
         {/* Stats row */}
         <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 20 }}>
           {[
-            { num: "10+", label: "Projects shipped" },
-            { num: "7", label: "Multi-agent systems" },
-            { num: "3", label: "Languages (TS/Py/Swift)" },
-            { num: "5+", label: "AI/LLM integrations" },
+            { num: "10+", label: "Products / prototypes shipped" },
+            { num: "7", label: "Agent-driven systems built" },
+            { num: "500+", label: "Equities screened in finance workflows" },
+            { num: "5", label: "Schema-aware data connectors" },
           ].map(s => (
             <div key={s.label} style={{ background: "rgba(255,255,255,0.02)", borderRadius: 10, padding: "20px 16px", border: "1px solid var(--border)", textAlign: "center" }}>
               <p style={{ fontFamily: '"Bebas Neue", Impact, sans-serif', fontSize: 32, color: "var(--accent-bright)", marginBottom: 4 }}>{s.num}</p>
@@ -356,10 +356,10 @@ export default function Home() {
           {/* Bio + skills */}
           <div style={{ flex: 1 }}>
             <p style={{ fontSize: 16, fontWeight: 400, lineHeight: 1.8, color: "var(--text-2)", marginBottom: 16 }}>
-              AI engineer with a background in quantitative finance. I built ML-driven research systems at a hedge fund, then went independent to build the tools I wished existed.
+              I build AI systems for domains where bluffing gets expensive: investment research, analytics, operations, and developer workflows. My background is a mix of quantitative finance, backend engineering, and product-minded shipping.
             </p>
             <p style={{ fontSize: 15, fontWeight: 400, lineHeight: 1.8, color: "var(--text-3)", marginBottom: 24 }}>
-              My sweet spot is the intersection of autonomous agents and real-time systems — building things that run, reason, and react without hand-holding. Every project above was built end-to-end by me, from architecture to deployment.
+              The common thread across these projects is simple: make the model earn its keep. That means structured outputs, sandboxed execution, reproducible pipelines, and interfaces that feel sharp enough to ship — not just cool enough to demo.
             </p>
 
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
