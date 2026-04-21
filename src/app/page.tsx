@@ -343,7 +343,7 @@ export default function Home() {
           </div>
           <div className="hero__meta-col">
             <span className="hero__meta-label eyebrow">Based</span>
-            <span className="hero__meta-value">New York / Remote</span>
+            <span className="hero__meta-value">United States / Remote</span>
           </div>
           <div className="hero__meta-col">
             <span className="hero__meta-label eyebrow">Status</span>
@@ -484,6 +484,19 @@ export default function Home() {
       <section ref={aboutRef} id="about" className="about">
         <div className="about__label">
           <span className="eyebrow fade-up">Biography</span>
+          <figure className="about__portrait fade-up">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/avatar.png"
+              alt="Shizhi Gu, photographed for the studio"
+              loading="lazy"
+            />
+            <figcaption>
+              <span className="about__portrait-caption">
+                <em>fig. 01</em>&thinsp; Shizhi, at the desk — 2026.
+              </span>
+            </figcaption>
+          </figure>
         </div>
 
         <div>
@@ -563,8 +576,8 @@ export default function Home() {
             {[
               { label: "Email", value: "shizhigu97@gmail.com", href: "mailto:shizhigu97@gmail.com" },
               { label: "GitHub", value: "@shizhigu", href: "https://github.com/shizhigu" },
-              { label: "LinkedIn", value: "in/shizhigu", href: "https://linkedin.com/in/shizhigu" },
-              { label: "X", value: "@shizhigu", href: "https://x.com/shizhigu" },
+              { label: "LinkedIn", value: "in/shizhi-gu", href: "https://www.linkedin.com/in/shizhi-gu-264924193" },
+              { label: "X", value: "@MikeG_builds", href: "https://x.com/MikeG_builds" },
             ].map((l) => (
               <a
                 key={l.label}
