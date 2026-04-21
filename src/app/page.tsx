@@ -158,7 +158,6 @@ const skills = [
   "DuckDB",
   "PostgreSQL",
   "TypeScript",
-  "Rust",
   "Python",
   "Modal",
   "React",
@@ -530,7 +529,7 @@ export default function Home() {
             <div>
               <dt className="about__specimen-label">Stack</dt>
               <dd className="about__specimen-value">
-                Rust · Python · TypeScript
+                Python · TypeScript · Swift
               </dd>
             </div>
             <div>
