@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 /* ═══ DATA ═══ */
 
 const projects = [
+  { cat: "DEVTOOLS", name: "sqlv", desc: "A SQLite viewer built for humans and coding agents to drive at the same time. Native Tauri desktop app, JSON-first CLI, and MCP server share one Rust core — and a push flow that live-mirrors terminal queries straight into the GUI my agent and I both watch.", tech: ["Rust", "Tauri", "TypeScript", "CodeMirror", "MCP"], url: "https://github.com/shizhigu/sqlite-viewer", brief: "/briefs/sqlv.md", featured: true },
   { cat: "AI AGENTS", name: "Chronicle", desc: "Multi-agent simulation where LLM-driven characters act inside typed rule systems and live governance structures. Describe any world in natural language; an LLM compiler turns it into agents, rules, and locations; the engine runs ticks and characters vote, scheme, and defect.", tech: ["Bun/TS", "React Router v7", "SQLite", "pi-agent", "Konva"], url: "https://github.com/shizhigu/chronicle", brief: "/briefs/chronicle.md", featured: true },
   { cat: "AI AGENTS", name: "Signal Scout", desc: "Most AI analytics tools stop at dashboards. Signal Scout spins up a swarm of database-connected investigators that find ICP patterns, test them statistically, and return conclusions with evidence instead of vibes.", tech: ["Claude SDK", "FastAPI", "Modal", "DuckDB", "MCP"], url: "https://github.com/shizhigu/signal-scout", brief: "/briefs/signal-scout.md", featured: false },
   { cat: "CREATIVE AI", name: "film-cli", desc: "Single AI video clips are easy. Coherent films are hard. film-cli gives agents a quality-gated production loop for multi-shot storytelling, continuity control, and shot-by-shot iteration.", tech: ["Bun/TS", "Kling", "Gemini Pro", "Remotion"], url: "https://github.com/shizhigu/film-cli", brief: "/briefs/film-cli.md", featured: true },
@@ -316,7 +317,7 @@ export default function Home() {
         {/* Stats row */}
         <div className="fade-up" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginBottom: 20 }}>
           {[
-            { num: "10+", label: "Products / prototypes shipped" },
+            { num: "12+", label: "Products / prototypes shipped" },
             { num: "7", label: "Agent-driven systems built" },
             { num: "500+", label: "Equities screened in finance workflows" },
             { num: "5", label: "Schema-aware data connectors" },
