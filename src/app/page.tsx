@@ -302,7 +302,12 @@ export default function Home() {
     <>
       {/* ═══ MASTHEAD ═══ */}
       <header className="masthead">
-        <div className="masthead__mark">Shizhi Gu</div>
+        <div className="masthead__mark-group">
+          <span className="masthead__monogram" aria-hidden>
+            SG
+          </span>
+          <span className="masthead__mark">Shizhi Gu</span>
+        </div>
         <nav className="masthead__nav" aria-label="Primary">
           <a href="#now">Now</a>
           <a href="#work">Work</a>
@@ -484,19 +489,9 @@ export default function Home() {
       <section ref={aboutRef} id="about" className="about">
         <div className="about__label">
           <span className="eyebrow fade-up">Biography</span>
-          <figure className="about__portrait fade-up">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/avatar.png"
-              alt="Shizhi Gu, photographed for the studio"
-              loading="lazy"
-            />
-            <figcaption>
-              <span className="about__portrait-caption">
-                <em>fig. 01</em>&thinsp; Shizhi, at the desk — 2026.
-              </span>
-            </figcaption>
-          </figure>
+          {/* No portrait — a developer studio doesn't need an author
+           * photo. The name in the masthead + hero is enough identity;
+           * the work is the face. */}
         </div>
 
         <div>
