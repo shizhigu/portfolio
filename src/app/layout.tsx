@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+// Fraunces is a variable serif with optical-sizing + soft/wonk axes. It's
+// the free alternative real studios reach for when they can't afford
+// Tiempos or Canela. Loading the full weight range lets us push it from
+// editorial body to display headline on the same page.
+const fraunces = Fraunces({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  axes: ["opsz", "SOFT"],
+  display: "swap",
+});
+
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -14,22 +26,20 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shizhi Gu — AI Engineer",
+  title: "Shizhi Gu — Studio",
   description:
-    "I build autonomous agent systems, real-time data pipelines, and AI-native products.",
+    "AI systems engineer. I build agent products with teeth — structured outputs, sandboxed execution, interfaces sharp enough to ship.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable}`}>
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
-      </head>
-      <body style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${inter.variable} ${mono.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }
