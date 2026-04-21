@@ -350,9 +350,9 @@ export default function Home() {
             <span className="hero__meta-value">United States / Remote</span>
           </div>
           <div className="hero__meta-col">
-            <span className="hero__meta-label eyebrow">Status</span>
+            <span className="hero__meta-label eyebrow">Currently</span>
             <span className="hero__meta-value">
-              Open to collaborations
+              Shipping sqlv &amp; Chronicle
             </span>
           </div>
         </div>
@@ -495,7 +495,7 @@ export default function Home() {
 
         <div>
           <p className="about__quote fade-up">
-            <em>Make the model earn its keep</em> — the rest is typography.
+            The playbook broke. <em>I'm writing the next one.</em>
           </p>
 
           <div className="about__body">
@@ -563,7 +563,7 @@ export default function Home() {
 
         <div>
           <p className="contact__lead">
-            Commission, collaborate, <em>or just say hello.</em>
+            Let's build something. <em>Or just say hello.</em>
           </p>
 
           <div className="contact__list">
