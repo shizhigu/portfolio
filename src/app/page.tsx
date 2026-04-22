@@ -47,6 +47,15 @@ const nowBuilding = {
 
 const projects = [
   {
+    cat: "Realtime Voice AI",
+    name: "Voice Companion",
+    desc: "Production-grade realtime AI voice platform for a tier-1 global entertainment client — fans chat by text, voice message, and live call with a licensed digital persona of a major-label pop artist. Architected for 100K DAU.",
+    tech: ["FastAPI", "LiveKit", "Python 3.13", "Postgres 17", "Milvus", "vLLM", "Qwen-3"],
+    url: "",
+    brief: "/briefs/voice-companion.md",
+    year: "2026",
+  },
+  {
     cat: "AI Agents",
     name: "Chronicle",
     desc: "Multi-agent simulation where LLM-driven characters act inside typed rule systems and live governance structures. Describe any world in plain English; an engine turns it into agents, rules, and locations.",
@@ -455,32 +464,40 @@ export default function Home() {
         </div>
 
         <ul>
-          {projects.map((p, i) => (
-            <li key={p.name}>
-              <a
-                href={p.url}
-                target="_blank"
-                rel="noopener"
-                className="work__row"
-              >
-                <span className="work__num">
-                  {String(i + 1).padStart(3, "0")}
-                </span>
-                <h3 className="work__name">
-                  <em>{p.name}</em>
-                </h3>
-                <p className="work__desc">{p.desc}</p>
-                <span className="work__cat">
-                  {p.cat}
-                  <br />
-                  {p.year}
-                </span>
-                <span className="work__arrow" aria-hidden>
-                  &rarr;
-                </span>
-              </a>
-            </li>
-          ))}
+          {projects.map((p, i) => {
+            // Some engagements are under NDA — no public GitHub. Those
+            // route to the brief (case note) instead of a repo; the
+            // category line shows "Under NDA" to make scope obvious.
+            const isPrivate = !p.url;
+            const href = isPrivate ? p.brief : p.url;
+            return (
+              <li key={p.name}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener"
+                  className="work__row"
+                >
+                  <span className="work__num">
+                    {String(i + 1).padStart(3, "0")}
+                  </span>
+                  <h3 className="work__name">
+                    <em>{p.name}</em>
+                  </h3>
+                  <p className="work__desc">{p.desc}</p>
+                  <span className="work__cat">
+                    {p.cat}
+                    {isPrivate && " · Under NDA"}
+                    <br />
+                    {p.year}
+                  </span>
+                  <span className="work__arrow" aria-hidden>
+                    &rarr;
+                  </span>
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </section>
 
